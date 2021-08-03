@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ThymeLeaf Demo</title>
+</head>
+<body>
+<span th:text="${me}"></span>
+<h2>Exam Result</h2>
+<div th:if="${grade}>= 60" >
+    Congrats! You passed the Exam! keep going
+    <div th:switch="${GPA}">You are
+        <span th:case="A">Excellent</span>
+        <span th:case="B">Good</span>
+        <span th:case="C">Okay</span>
+        <SPAN th:case ="D">Need Improvement</SPAN>
+    </div>
+</div>
+<div th:if="${grade} < 60 " >
+    You failed in Exam
+</div>
+</body>
+</html>
